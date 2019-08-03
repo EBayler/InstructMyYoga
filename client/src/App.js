@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import FacebookLogin from 'react-facebook-login';
-import GoogleLogin from 'react-google-login';
+import Login from "./pages/Login";
+import Class from "./pages/Class";
+import NoMatch from "./pages/NoMatch";
+import './App.css';
 
 class App extends Component {
 
@@ -12,35 +13,18 @@ class App extends Component {
   }
 
   render() {
-
-    const responseFacebook = (response) => {
-      console.log(response);
-    }
-
-    const responseGoogle = (response) => {
-      console.log(response);
-    }
-
-    return (
-      <div className="App">
-        <h1>LOGIN WITH FACEBOOK AND GOOGLE</h1>
-
-      <FacebookLogin
-        appId="" //APP ID NOT CREATED YET
-        fields="name,email,picture"
-        callback={responseFacebook}
-      />
-      <br />
-      <br />
-
-
-      <GoogleLogin
-        clientId="" //CLIENTID NOT CREATED YET
-        buttonText="LOGIN WITH GOOGLE"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-      />
-      </div>
+    return (  
+    <Router>
+      <div>
+      {/* <Nav />*/}
+        <Switch>
+        <Route exact path="/" component={Login} />
+        <Route exact path="/class" component={Class} />
+        <Route exact path="/class/:id" component={Class} />
+        <Route component={NoMatch} />
+        </Switch>
+      </div> 
+    </Router>
     );
   }
 }
