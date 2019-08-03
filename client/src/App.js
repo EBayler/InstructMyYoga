@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import FacebookLogin from 'react-facebook-login';
-
 import GoogleLogin from 'react-google-login';
 
 class App extends Component {
+
+  state = {
+    loggedIn: false,
+    userId: ""
+  }
 
   render() {
 
@@ -36,7 +40,6 @@ class App extends Component {
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
       />
-
       </div>
     );
   }
