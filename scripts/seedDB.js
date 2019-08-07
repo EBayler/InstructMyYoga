@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/instructMyYoga"
 );
 
 const yogaPoseSeed = [
@@ -40,6 +39,18 @@ const yogaPoseSeed = [
     image: ""
   }
 ];
+
+db.Pose 
+  .remove({})
+  .then(() => db.Pose.collection.insertMany(yogaPoseSeed))
+  .then(insertedData => {
+    console.log(insertedData.result);
+    process.exit(0);
+  })
+  .catch(err => {
+    console.log(err);
+    process.exit(1);
+  });
 
 // db.Book
 //   .remove({})
