@@ -23,7 +23,7 @@ const userSchema = new Schema({
     type: String,
     unique: true,
     match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
-  }
+  },
 });
 
 
