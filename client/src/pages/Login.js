@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import FacebookLogin from 'react-facebook-login';
 // import GoogleLogin from 'react-google-login';
 import React from 'react';
@@ -8,29 +9,12 @@ import ReactDOM from 'react-dom';
 const responseFacebook = (response) => {
   console.log(response);
 }
+=======
+import ReactDOM from 'react-dom';
+import FacebookLogin from 'react-facebook-login';
+import GoogleLogin from 'react-google-login';
+>>>>>>> 4c78cc373a7eb96ca70f32947adbf1b221c6eb89
 
-// const responseGoogle = (response) => {
-//   console.log(response);
-// }
-
-// <div className="App">
-// <h1>LOGIN WITH FACEBOOK AND GOOGLE</h1>
-
-// <FacebookLogin
-// appId="" //APP ID NOT CREATED YET
-// fields="name,email,picture"
-// callback={responseFacebook}
-// />
-// <br />
-// <br />
-
-
-// <GoogleLogin
-// clientId="" //CLIENTID NOT CREATED YET
-// buttonText="LOGIN WITH GOOGLE"
-// onSuccess={responseGoogle}
-// onFailure={responseGoogle}
-// />
 
 class Login extends React.Component {
   render(){
