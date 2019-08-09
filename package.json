@@ -1,0 +1,27 @@
+{
+  "name": "instruct-my-yoga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.6.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node scripts/seedDB.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EBayler/InstructMyYoga.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EBayler/InstructMyYoga/issues"
+  },
+  "homepage": "https://github.com/EBayler/InstructMyYoga#readme"
+}
