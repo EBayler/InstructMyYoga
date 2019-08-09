@@ -3,7 +3,7 @@ import './style.css';
 
 function PoseCard(props){
   return (
-    <div>
+    <div className="PoseCard">
       {props.children}
     </div>
   );
