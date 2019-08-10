@@ -24,9 +24,24 @@ class Class extends Component {
   render(){
     return (
       <div>
-        <PoseCard>This is a PoseCard .children prop</PoseCard>
-      </div>
-      
+        { 
+          this.state.poses.length ? (
+            this.state.poses.map(pose => (
+              <PoseCard
+                name={pose.name}
+                sanskrit={pose.sanskrit}
+                image={pose.image}
+                description={pose.description}
+                difficulty={pose.difficulty}
+                type={pose.type}
+                benefits={pose.benefits}
+              >{pose.name}</PoseCard>
+            ))
+          ) : (
+            <h1> No Poses Were Found </h1>
+          )
+        }
+      </div> 
     );
   }
 
