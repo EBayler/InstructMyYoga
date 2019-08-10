@@ -16,7 +16,7 @@ const yogaPoseSeed = [
     difficulty: "1",
     type: "Standing",
     benefits: ["balance", "presence"],
-    image: ""
+    image: "/images/1.jpg"
   },
   { 
     name: "Crane (Crow) Pose",
@@ -26,7 +26,7 @@ const yogaPoseSeed = [
     difficulty: "3",
     type: "Arm Balance",
     benefits: ["balance", "strength"],
-    image: ""
+    image: "./images/2.jpg"
   },
   { 
     name: "Eight-Angle Post",
@@ -36,7 +36,7 @@ const yogaPoseSeed = [
     difficulty: "5",
     type: "Arm Balance",
     benefits: ["balance", "strength"],
-    image: ""
+    image: "/images/3.jpg"
   }
 ];
 
