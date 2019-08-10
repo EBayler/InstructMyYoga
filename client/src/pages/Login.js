@@ -4,22 +4,27 @@ import FacebookLogin from 'react-facebook-login';
 import React from 'react';
 
 
-FB.getLoginStatus(function(response) {
-  statusChangeCallback(response) {
-      'connected',
-      authResponse: {
-      accessToken: '...',
-      expiresIn:'...',
-      signedRequest:'...',
-      userID:'...'
-  },
-  });
+const Login = props => {
+  return (
+    <h2>Login works!</h2>
+  )
+}
+// FB.getLoginStatus(function(response) {
+//   statusChangeCallback(response) {
+//       'connected',
+//       authResponse: {
+//       accessToken: '...',
+//       expiresIn:'...',
+//       signedRequest:'...',
+//       userID:'...'
+//   },
+//   });
 
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+//   function checkLoginState() {
+//     FB.getLoginStatus(function(response) {
+//       statusChangeCallback(response);
+//     });
+//   }
 
 
 // const responseFacebook = (response) => {
