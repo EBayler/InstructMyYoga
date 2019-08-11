@@ -1,15 +1,30 @@
 import React, { Component } from 'react';
-import PoseCard from '../components/PoseCard'
+import dragula from "react-dragula";
+import Canvas from '../components/Canvas';
+import Poses from '../components/Poses'
 import API from "../utils/API";
+import './style.css'
+
 
 class Class extends Component {
 
   state = {
-    poses: []
+    nameOfClass: "",
+    poses: [],
   }
 
   componentDidMount(){
     this.loadPoses();
+    dragula([document.getElementsByClassName("poses"), 
+            document.getElementsByClassName("canvas")], {
+      copy: function (el, source) {
+        return source === document.getElementsByClassName('poses')
+        },
+      accepts: function (el, target) {
+        return target !== document.getElementByClassName('poses')
+        }
+      }
+    ); 
   }
 
   loadPoses = () => {
@@ -23,24 +38,13 @@ class Class extends Component {
   }
   render(){
     return (
-      <div>
-        { 
-          this.state.poses.length ? (
-            this.state.poses.map(pose => (
-              <PoseCard
-                name={pose.name}
-                sanskrit={pose.sanskrit}
-                image={pose.image}
-                description={pose.description}
-                difficulty={pose.difficulty}
-                type={pose.type}
-                benefits={pose.benefits}
-              >{pose.name}</PoseCard>
-            ))
-          ) : (
-            <h1> No Poses Were Found </h1>
-          )
-        }
+      <div className="flex-container ">
+        <div className="poses">
+          <Poses poses={this.state.poses}/>
+        </div>
+        <div className="canvas">
+        <Canvas>This is the canvas.</Canvas>
+        </div>  
       </div> 
     );
   }
