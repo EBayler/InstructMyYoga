@@ -3,6 +3,7 @@ import './style.css';
 
 function PoseCard(props){
 
+
   let benefitsList = ""
   for (let i=0; i<props.benefits.length; i++){
     if (i + 1 === props.benefits.length) {
@@ -14,12 +15,12 @@ function PoseCard(props){
 
   return (
     <div className="PoseCard">'
-      <img src={process.env.PUBLIC_URL + `${props.image}`}></img>
-      <h2>Name: {props.name}</h2>
-      <h2>Sanskrit Name: {props.sanskrit}</h2>
-      <h2>Type: {props.type}</h2>
-      <h2>Benefits: {benefitsList}</h2>
-      <h2>Difficulty: {props.difficulty}</h2>
+      <img className="poseImage" alt={`${props.name}`} src={process.env.PUBLIC_URL + `${props.image}`}></img>
+      <p><strong>Name: </strong> {props.name}</p>
+      <p>Sanskrit Name: {props.sanskrit}</p>
+      <p>Type: {props.type}</p>
+      <p>Benefits: {benefitsList}</p>
+      <p>Difficulty: {props.difficulty}</p>
       <p>{props.description}</p>
     </div>
   );

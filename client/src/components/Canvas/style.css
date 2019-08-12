@@ -1,0 +1,10 @@
+.Canvas {
+    background-color: #dfd6cb;
+    height: 80%;
+    width: 80%px;
+    border-style:solid;
+}
+
+.classTitle {
+    text-align: center;
+}

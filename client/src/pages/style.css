@@ -1,0 +1,19 @@
+.canvas {
+    min-height: 80%;
+    width: 75%;
+    border-style:solid red;
+}
+
+
+body {
+    background-color: aqua;
+}
+
+.flex-container {
+    display: flex;
+    min-height: 80%;
+}
+
+.poses {
+    width: 25%;
+}
