@@ -13,11 +13,9 @@ class Canvas extends React.Component{
     var container = ReactDOM.findDOMNode(this);
     console.log(container);
     dragula([container], {
-      copy: function (el, source) {
-        return source === document.getElementsByClassName('draggable')
-        },
+      moves: true,
       accepts: function (el, target) {
-        return target !== document.getElementByClassName('draggable')
+        return target === document.getElementByClassName('draggable')
         }
       }
     ); 
@@ -25,9 +23,10 @@ class Canvas extends React.Component{
 
   render(){
     return (
-      <div className="Canvas">
-      <h2 className="classTitle" contenteditable="true">Add Your Class Name Here</h2>
+      <div id="canvas" className="Canvas">
+        <h2 className="classTitle" contentEditable="true">Add Your Class Name Here</h2>
         {this.props.children}
+        <h3>This is an h3</h3>
       </div>
     );
   }
