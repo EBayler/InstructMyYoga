@@ -10,7 +10,8 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.6.8",
     "npm": "^6.10.3",
-    "react-facebook-login": "^4.1.1"
+    "react-facebook-login": "^4.1.1",
+    "react-lightbox-component": "^1.2.1"
   },
   "devDependencies": {},
   "scripts": {
