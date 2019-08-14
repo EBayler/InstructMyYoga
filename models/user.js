@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  
+  userId: {
+    type: String,
+    required: true
+  },
   username: { 
     type: String, 
     trim: true,
@@ -23,7 +26,7 @@ const userSchema = new Schema({
     type: String,
     unique: true,
     match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
-  },
+  }
 });
 
 

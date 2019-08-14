@@ -29,7 +29,8 @@ class Class extends Component {
       accepts: function (el, target) {
         //  console.log(el);
         return target !== dragFrom;
-      }
+      },
+      direction: 'horizontal'
     }); 
   }
 
