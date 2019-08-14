@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-
 mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/instructMyYoga"
@@ -9,6 +8,7 @@ mongoose.connect(
 
 const yogaPoseSeed = [
   {
+    poseId: "1",
     name: "Mountain Pose",
     sanskrit: "Tadasana",
     description:
@@ -19,6 +19,7 @@ const yogaPoseSeed = [
     image: "/images/1.jpg"
   },
   { 
+    poseId: "2",
     name: "Crane (Crow) Pose",
     sanskrit: "Bakasana",
     description:
@@ -29,6 +30,7 @@ const yogaPoseSeed = [
     image: "./images/2.jpg"
   },
   { 
+    poseId: "3",
     name: "Eight-Angle Pose",
     sanskrit: "Astravakrasana",
     description:
@@ -40,16 +42,46 @@ const yogaPoseSeed = [
   }
 ];
 
+const classSeed = [
+  { userName: "Demo",
+    userId: "1",
+    classes: [{
+    className: "Demo Class",
+    poses: [1, 2, 3, 4, 5, 6]
+    }]
+  },
+  { userName: "Nena",
+    userId: "2",
+    classes: [{
+      className: "First Class",
+      poses: [1, 2, 4, 6, 4, 1]
+      },
+      {
+      className: "Second Class",
+      poses: [1, 1, 1, 2, 1,]
+    }]
+  }
+]
+
 db.Pose 
   .remove({})
   .then(() => db.Pose.collection.insertMany(yogaPoseSeed))
   .then(insertedData => {
     console.log(insertedData.result);
-    process.exit(0);
+    //process.exit(0);
   })
   .catch(err => {
     console.log(err);
     process.exit(1);
   });
+
+db.User
+  .remove({})
+  .then(() => db.User.collection.insertMany(classSeed))
+  .then(insertedData => {
+    console.log("In user seed file");
+    console.log(insertedData.result);
+    process.exit(0);
+  })
 
 
