@@ -5,7 +5,6 @@ import Poses from '../components/Poses'
 import API from "../utils/API";
 import './style.css'
 
-
 class Class extends Component {
 
   state = {
@@ -15,17 +14,25 @@ class Class extends Component {
 
   componentDidMount(){
     this.loadPoses();
-    dragula([document.getElementsByClassName("poses"), 
-            document.getElementsByClassName("canvas")], {
+    var idTest = document.getElementById('idTest');
+    var canvasIdTest = document.getElementById('canvas');
+    var dragFrom = idTest;
+    var dragTo = canvasIdTest;
+    // var dragTo = document.getElementsByClassName('canvas')
+    console.log(dragFrom);
+    console.log(dragTo);
+    dragula([dragFrom, dragTo], {
       copy: function (el, source) {
-        return source === document.getElementsByClassName('poses')
-        },
+        console.log(`${el} is being copied`);
+        return source === dragFrom;
+      },
       accepts: function (el, target) {
-        return target !== document.getElementByClassName('poses')
-        }
+        //  console.log(el);
+        return target !== dragFrom;
       }
-    ); 
+    }); 
   }
+
 
   loadPoses = () => {
     API.getPoses()

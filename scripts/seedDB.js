@@ -29,7 +29,7 @@ const yogaPoseSeed = [
     image: "./images/2.jpg"
   },
   { 
-    name: "Eight-Angle Post",
+    name: "Eight-Angle Pose",
     sanskrit: "Astravakrasana",
     description:
       "A difficult asymmetrical arm balance, Eight-Angle Pose",
@@ -52,14 +52,4 @@ db.Pose
     process.exit(1);
   });
 
-// db.Book
-//   .remove({})
-//   .then(() => db.Book.collection.insertMany(bookSeed))
-//   .then(data => {
-//     console.log(data.result.n + " records inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
+
