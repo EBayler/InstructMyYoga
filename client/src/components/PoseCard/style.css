@@ -1,12 +1,14 @@
 .PoseCard {
-    background-color: tan;
+    /* background-color: #FFa700; */
     height: 300px;
-    width: 200px;
-    border-style:solid;
+    width: 300px;
+    /* border-style:solid; */
     font-size: 10px;
+    margin: 20px;
 }
 
 .poseImage {
-    height: 50%;
-    width: 50%;
+    height: 100%;
+    width: 90%;
 }
+

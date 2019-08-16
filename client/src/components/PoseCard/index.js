@@ -26,4 +26,5 @@ function PoseCard(props){
   );
 }
 
+
 export default PoseCard;
