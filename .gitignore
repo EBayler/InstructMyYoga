@@ -8,6 +8,7 @@
 
 # environment variables
 .env
+./client/src/auth_config.json
 # testing
 /coverage
 
