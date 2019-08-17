@@ -1,3 +1,4 @@
 module.exports = {
-  Pose: require("./pose")
+  Pose: require("./pose"),
+  User: require("./user")
 };
