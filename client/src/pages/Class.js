@@ -46,14 +46,21 @@ class Class extends Component {
   }
   render(){
     return (
+      <div className="Everything">
+         <div id="text-area">
+          <form id="noter-save-form" method="POST">
+        <textarea id="noter-text-area" name="textarea" placeholder="Your Class Name" value={this.state.value} onChange={this.handleChange} /> 
+        </form>
+      </div>
       <div className="flex-container ">
         <div className="poses">
           <Poses poses={this.state.poses}/>
         </div>
         <div className="canvas">
-        <Canvas>This is the canvas.</Canvas>
+        <Canvas></Canvas>
         </div>  
-      </div> 
+        </div> 
+        </div>
     );
   }
 
