@@ -1,11 +1,28 @@
 .Canvas {
+    margin-top: 25px;
     background-color: #04478d;
     /* #8aacd0 */
     height: 100%;
     width: 80%px;
     border-style:solid;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .classTitle {
     text-align: center;
+}
+
+#noter-text-area {
+    position: absolute;
+    height: 60px;
+    width: 100%; 
+    padding: 10px;
+    margin: -80px;
+    text-align: center;
+    background-color: #020926;
+    border: none;
+    color: #94d3c8;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
 }

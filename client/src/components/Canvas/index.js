@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import dragula from "react-dragula";
+// import { Text, TextInput, View } from 'react-native';
 import './style.css';
 
 class Canvas extends React.Component{
@@ -21,12 +22,11 @@ class Canvas extends React.Component{
     ); 
   }
 
+
   render(){
     return (
       <div id="canvas" className="Canvas">
-        <h2 className="classTitle" contentEditable="true">Add Your Class Name Here</h2>
         {this.props.children}
-        <h3>This is an h3</h3>
       </div>
     );
   }
