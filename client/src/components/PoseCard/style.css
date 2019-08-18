@@ -1,7 +1,7 @@
 .PoseCard {
     background-color: transparent;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     perspective: 1000px;
     /* border-style:solid; */
     font-size: 10px;
@@ -43,7 +43,7 @@
     color: #04478d;
     text-align: center;
     padding: 20px 0;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 
