@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
+require ('dotenv').config();
 
 mongoose.connect(
   process.env.MONGODB_URI ||
@@ -43,14 +44,16 @@ const yogaPoseSeed = [
 ];
 
 const classSeed = [
-  { userName: "Demo",
-    userId: "1",
+  { userName: process.env.USER_NAME,
+    userImage: "https://lh4.googleusercontent.com/-Ya9AZqgHWV0/AAAAAAAAAAI/AAAAAAAAABs/LxYT6VoF_xM/s96-c/photo.jpg",
+    userId: process.env.USER_ID,
     classes: [{
     className: "Demo Class",
     poses: [1, 2, 3, 4, 5, 6]
     }]
   },
   { userName: "Nena",
+    userImage: "https://lh4.googleusercontent.com/-Ya9AZqgHWV0/AAAAAAAAAAI/AAAAAAAAABs/LxYT6VoF_xM/s96-c/photo.jpg",
     userId: "2",
     classes: [{
       className: "First Class",

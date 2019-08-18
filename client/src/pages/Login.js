@@ -3,13 +3,28 @@ import React from "react";
 import ReactDOM from 'react-dom'; // Google login
 import GoogleLogin from 'react-google-login'; // Google login
 import { useAuth0 } from "../components/Auth0/index";
+import API from "../utils/API";
+import config from "../auth_config.json";
 
 const NavBar = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { loginWithRedirect, logout } = useAuth0();
+  const isAuthenticated = false;
 
 // Google Login:
 const responseGoogle = (response) => {
     console.log(response);
+    console.log(response.w3.ig);
+    console.log(response.googleId);
+    loginUser(response.googleId);
+
+  }
+
+const loginUser = (googleId) => {
+    console.log("In loginUser in Login.js");
+    API.loginUser(googleId)
+    .then(res => {
+      console.log(res);
+    });
   }
 
   return (
@@ -27,11 +42,14 @@ const responseGoogle = (response) => {
           Log in
         </button>
         <GoogleLogin
-          clientId="638633219491-en76o5fsd4c9a7r7rertgqa5110qqfum.apps.googleusercontent.com"
+          clientId={config.GOOGLE_CLIENT_ID}
           buttonText="Login"
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
           cookiePolicy={'single_host_origin'}
+          // Maybe use these for redirect if I can't find another way.
+          //uxMode='redirect'
+          // redirectUri="http://localhost:3000/classlist"
         ></GoogleLogin>
     </div>      
       )}
@@ -42,11 +60,3 @@ const responseGoogle = (response) => {
 };
 
 export default NavBar;
-
-/* 
-
- 
-ReactDOM.render(
-  ,
-  document.getElementById('googleButton')
-); */

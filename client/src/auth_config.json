@@ -1,4 +1,7 @@
 {
   "domain": "dev-3rd8odab.auth0.com",
-  "clientId": "c14bdwflkbV4SLV6D7iXoBtxDHrltqvB"
+  "clientId": "c14bdwflkbV4SLV6D7iXoBtxDHrltqvB",
+  "REDIRECT_URI": "www.google.com",
+  "GOOGLE_CLIENT_ID": "638633219491-en76o5fsd4c9a7r7rertgqa5110qqfum.apps.googleusercontent.com" 
 }
+
