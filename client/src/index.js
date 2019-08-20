@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
@@ -28,6 +30,4 @@ ReactDOM.render(
   </Auth0Provider>,
   document.getElementById("root")
 );
-
-serviceWorker.unregister();
 
