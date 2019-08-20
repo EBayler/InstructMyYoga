@@ -3,15 +3,14 @@ import './style.css';
 
 function ClassCard(props){
 
-
   return (
-    <div className="ClassCard">'
+    <div className="ClassCard">
       <div>
-      {this.props.className}
+      <p>{props.classTitle}</p>
+      <p>{props.children}</p>
       </div>
     </div>
   );
 }
 
-
-export default PoseCard;
+export default ClassCard;

@@ -48,19 +48,22 @@ const classSeed = [
     userImage: "https://lh4.googleusercontent.com/-Ya9AZqgHWV0/AAAAAAAAAAI/AAAAAAAAABs/LxYT6VoF_xM/s96-c/photo.jpg",
     userId: process.env.USER_ID,
     classes: [{
-    className: "Demo Class",
-    poses: [1, 2, 3, 4, 5, 6]
+      classId: 1,
+      classTitle: "Demo Class",
+      poses: [1, 2, 3, 4, 5, 6]
     }]
   },
   { userName: "Nena",
     userImage: "https://lh4.googleusercontent.com/-Ya9AZqgHWV0/AAAAAAAAAAI/AAAAAAAAABs/LxYT6VoF_xM/s96-c/photo.jpg",
     userId: "2",
     classes: [{
-      className: "First Class",
+      classId: 1,
+      classTitle: "First Class",
       poses: [1, 2, 4, 6, 4, 1]
       },
       {
-      className: "Second Class",
+      classId: 2,
+      classTitle: "Second Class",
       poses: [1, 1, 1, 2, 1,]
     }]
   }

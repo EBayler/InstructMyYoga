@@ -6,11 +6,6 @@ class Poses extends React.Component {
 
   componentDidMount(){
     console.log("Poses Component Mounted");
-    // var container = ReactDOM.findDOMNode(this);
-    // console.log(container);
-    // dragula([container], {
-    //   mirrorContainer: document.body
-    // }); 
   }
    
   render(){
