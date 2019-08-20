@@ -21,7 +21,7 @@ return (
   ) : (
     <h3>You don't have any classes yet. Let's get Started!</h3>
   )}
-    <ClassCard className="new-class">+</ClassCard>
+    <ClassCard>+</ClassCard>
   </div>
   );
 }

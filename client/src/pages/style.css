@@ -5,8 +5,10 @@
 }
 
 
-body {
+.Everything {
     background-color: #020926;
+    padding: 100px;
+
 }
 
 .flex-container {
