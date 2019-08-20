@@ -6,20 +6,20 @@ import Class from "./pages/Class";
 import ClassList from "./pages/ClassList"
 import NoMatch from "./pages/NoMatch";
 import './App.css';
-
-//import NavBar from "./pages/Login";
-// import { useAuth0 } from "./react-auth0-wrapper";
+import NavBar from "./components/Navbar";
 
 class App extends Component {
 
   state = {
     loggedIn: false,
-    userId: ""
+    userId: "",
+
   }
 
   render() {
     return (  
     <Router>
+      <NavBar />
       <div>
         <Switch>
         <Route exact path="/" component={Login} />
