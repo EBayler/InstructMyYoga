@@ -7,7 +7,7 @@ import API from "./utils/API";
 import NoMatch from "./pages/NoMatch";
 import './App.css';
 import GoogleLoginButton from "./components/LoginButton";
-import NavBar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 
 class App extends Component {
 
@@ -62,7 +62,7 @@ class App extends Component {
       >
       Log In With Google
       </GoogleLoginButton> 
-      <NavBar /> 
+      {/*<Navbar /> */} 
       <Router>
         <div>
           <Switch>
