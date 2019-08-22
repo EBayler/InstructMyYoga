@@ -66,6 +66,7 @@ class Class extends Component {
         userObject: res.data
       })
       console.log(this.state.classPoses);
+      console.log(this.state.userObject);
     })
   }
 
@@ -82,8 +83,11 @@ class Class extends Component {
             <Poses poses={this.state.poses}/>
           </div>
           <div className="canvas">
-          <Canvas // add userObject props to show classes here somehow.
-          ></Canvas>
+          {  this.state.userObject && 
+          <Canvas 
+            user={this.state.userObject}
+            selectedClass={this.state.classId - 1}
+          ></Canvas>}
           </div>  
         </div> 
       </div>
