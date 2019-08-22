@@ -12,7 +12,6 @@ class Canvas extends React.Component{
 
   componentDidMount(){
     var container = ReactDOM.findDOMNode(this);
-    console.log(container);
     dragula([container], {
       moves: true,
       accepts: function (el, target) {

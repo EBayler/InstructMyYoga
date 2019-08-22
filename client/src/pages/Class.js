@@ -8,32 +8,42 @@ import './style.css'
 class Class extends Component {
 
   state = {
-    nameOfClass: "",
+    nameOfClass: "Enter your class name here",
     poses: [],
+    userId: "",
+    classId: "",
+    classPoses: [],
+    userObject: {}
   }
-
+  componentWillMount(){
+    this.setState({
+      userId: this.props.location.state.userId,
+      classId: this.props.match.params.id
+      }
+    );
+  }
   componentDidMount(){
     this.loadPoses();
+    this.loadClassPoses()
     var idTest = document.getElementById('idTest');
     var canvasIdTest = document.getElementById('canvas');
     var dragFrom = idTest;
     var dragTo = canvasIdTest;
-    // var dragTo = document.getElementsByClassName('canvas')
-    console.log(dragFrom);
-    console.log(dragTo);
+    console.log(`The following props are available for use: ${this.props.match.params.id}`)
+    console.log(`The following props are available for use: ${this.props.location.state.userId}`)    
+    
+
     dragula([dragFrom, dragTo], {
       copy: function (el, source) {
         console.log(`${el} is being copied`);
         return source === dragFrom;
       },
       accepts: function (el, target) {
-        //  console.log(el);
         return target !== dragFrom;
       },
       direction: 'horizontal'
     }); 
   }
-
 
   loadPoses = () => {
     API.getPoses()
@@ -41,26 +51,42 @@ class Class extends Component {
       this.setState({
         poses: res.data
       }) 
-      console.log(this.state.poses);
     });
   }
+
+  loadClassPoses = () => {
+    console.log(`User Id state = ${this.state.userId}`);
+    console.log(`Class Id state = ${this.state.classId}`);
+    API.getClassPoses(this.state.userId, this.state.classId)
+    .then(res => {
+      let posesToLoad = res.data.classes[this.state.classId -1].poses;
+      console.log(posesToLoad);
+      this.setState({
+        classPoses: posesToLoad,
+        userObject: res.data
+      })
+      console.log(this.state.classPoses);
+    })
+  }
+
   render(){
     return (
       <div className="Everything">
-         <div id="text-area">
+        <div id="text-area">
           <form id="noter-save-form" method="POST">
-        <textarea id="noter-text-area" name="textarea" placeholder="Your Class Name" value={this.state.value} onChange={this.handleChange} /> 
+        <textarea id="noter-text-area" name="textarea" placeholder={this.state.nameOfClass} value={this.state.value} onChange={this.handleChange} /> 
         </form>
-      </div>
-      <div className="flex-container ">
-        <div className="poses">
-          <Poses poses={this.state.poses}/>
         </div>
-        <div className="canvas">
-        <Canvas></Canvas>
-        </div>  
+        <div className="flex-container ">
+          <div className="poses">
+            <Poses poses={this.state.poses}/>
+          </div>
+          <div className="canvas">
+          <Canvas // add userObject props to show classes here somehow.
+          ></Canvas>
+          </div>  
         </div> 
-        </div>
+      </div>
     );
   }
 

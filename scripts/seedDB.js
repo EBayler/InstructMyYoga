@@ -28,7 +28,7 @@ const yogaPoseSeed = [
     difficulty: "3",
     type: "Arm Balance",
     benefits: ["balance", "strength"],
-    image: "./images/2.jpg"
+    image: "/images/2.jpg"
   },
   { 
     poseId: "3",

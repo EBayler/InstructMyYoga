@@ -6,10 +6,11 @@ import config from "../../auth_config.json";
 const GoogleLoginButton = (props) => {
 
   return (
-
+    
     <div>
       { !props.isAuthenticated ? (
         <div>
+          {console.log(`In login state ${props.isAuthenticated}`)}
           <GoogleLogin
             clientId={config.GOOGLE_CLIENT_ID}
             buttonText={props.children}
@@ -19,12 +20,16 @@ const GoogleLoginButton = (props) => {
           ></GoogleLogin>
         </div>      
         ) : ( 
+        <div>
+          {console.log(`In logout state ${props.isAuthenticated}`)}
           <GoogleLogout
           clientId={config.GOOGLE_CLIENT_ID}
           buttonText="Logout"
-          onLogoutSuccess={props.logout}
+          onLogoutSuccess={props.onLogout}
           >
-        </GoogleLogout>
+          </GoogleLogout>  
+        </div>
+          
         ) 
       }
     </div>
