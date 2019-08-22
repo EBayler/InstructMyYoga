@@ -4,9 +4,22 @@
     /* #8aacd0 */
     height: 100%;
     width: 80%px;
-    border-style:solid;
     display: flex;
     flex-wrap: wrap;
+}
+
+.canvas {
+    min-height: 80%;
+    width: 75%;
+}
+
+.flex-container {
+    display: flex;
+    min-height: 80%;
+}
+
+.poses {
+    width: 25%;
 }
 
 .classTitle {
@@ -25,4 +38,10 @@
     color: #94d3c8;
     font-family: 'Quicksand', sans-serif;
     font-size: 30px;
+}
+
+.Everything {
+    background-color: #020926;
+    padding: 100px;
+
 }

@@ -80,7 +80,7 @@ const yogaPoseSeed = [{
   {
     poseId: "8",
     name: "Half Pigeon",
-    sanskrit: "n/a",
+    sanskrit: "Kapotasana",
     description: "Full body stretch that stimulates abdominal organs.",
     difficulty: "2",
     type: "core strength",
@@ -100,9 +100,9 @@ const yogaPoseSeed = [{
 ];
 
 const classSeed = [{
-    userName: process.env.USER_NAME,
+    userName: "Jim",
     userImage: "https://lh4.googleusercontent.com/-Ya9AZqgHWV0/AAAAAAAAAAI/AAAAAAAAABs/LxYT6VoF_xM/s96-c/photo.jpg",
-    userId: process.env.USER_ID,
+    userId: "3",
     classes: [{
       classId: 1,
       classTitle: "Demo Class",
@@ -126,9 +126,9 @@ const classSeed = [{
     ]
   },
   {
-    userName: process.env.USER_NAME2,
+    userName: process.env.USER_NAME,
     userImage: "https://lh5.googleusercontent.com/-Yby-HH9zn7Q/AAAAAAAAAAI/AAAAAAAAAA8/ikwCbMWOwFI/s96-c/photo.jpg",
-    userId: process.env.USER_ID2,
+    userId: process.env.USER_ID,
     classes: [{
       classId: 1,
       classTitle: "Get Bendy",

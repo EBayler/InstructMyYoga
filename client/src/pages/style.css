@@ -1,21 +1,40 @@
-.canvas {
-    min-height: 80%;
-    width: 75%;
-    border-style:solid red;
+body {
+    /* background: rgb(113, 203, 168);
+    background: radial-gradient(circle, rgba(113, 203, 168, 1) 0%, rgba(2, 105, 163, 1) 76%, rgba(2, 9, 38, 1) 100%);
+     */
+     background: rgb(113, 203, 168);
+     background: linear-gradient(90deg, rgba(113, 203, 168, 1) 0%, rgba(2, 105, 163, 1) 76%, rgba(2, 9, 38, 1) 100%);
+
+    }
+
+div.Image {
+    background-image: url(https://seeklogo.com/images/O/OM_YOGA-logo-6F30131211-seeklogo.com.png);
+}
+h1 {
+    font-size: 75px;
+    /* margin-top: 300px; */
+    padding-bottom: 75px;
 }
 
-
-.Everything {
-    background-color: #020926;
-    padding: 100px;
+.Information {
+    height: 45px;
+    margin-top: 75px;
+    /* visibility: hidden; */
 
 }
 
-.flex-container {
-    display: flex;
-    min-height: 80%;
+/* .Information .Attention{
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
 }
 
-.poses {
-    width: 25%;
-}
+.Information:hover .Attention {
+    visibility: visible;
+} */

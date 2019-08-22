@@ -8,6 +8,7 @@ function ClassCard(props){
       <div>
       <p>{props.classTitle}</p>
       <p>{props.children}</p>
+        <h3>Get Your Bend On</h3>
       </div>
     </div>
   );

@@ -53,8 +53,8 @@ class App extends Component {
   render() {
     console.log('state', this.state.classes);
     return (
-    <div> 
-      <GoogleLoginButton
+    <div className="google"> 
+      <GoogleLoginButton className="googbutt"
         onSuccess={this.responseGoogle}
         onFailure={this.responseGoogle}
         response={this.responseGoogle}
