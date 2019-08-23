@@ -7,7 +7,6 @@ import API from "./utils/API";
 import NoMatch from "./pages/NoMatch";
 import './App.css';
 import GoogleLoginButton from "./components/LoginButton";
-import Navbar from "./components/Navbar";
 
 class App extends Component {
 
@@ -19,24 +18,18 @@ class App extends Component {
 
   // Google Login:
   responseGoogle = (response) => {
-    console.log(response);
-    console.log(response.w3.ig);
-    console.log(response.googleId);
     this.loginUser(response);
   }
 
   loginUser = (googleInfo) => {
     API.loginUser(googleInfo.Id)
     .then( (res) => {
-      console.log(res.data[0].classes);
+      console.log(res.data);
       this.setState({
         isAuthenticated: true,
         userId: googleInfo.googleId,
-        classes: res.data[0].classes
+        classes: res.data.classes
       });
-      // console.log(res);
-      // console.log(`User is set to: ${this.state.userId}`);
-      // console.log(`This user has the following classes ${this.state.classes[0].className}`)
     });
   }
 
@@ -45,8 +38,10 @@ class App extends Component {
     this.setState({
       isAuthenticated: false
     })
+    console.log(`current state is: ${this.state.isAuthenticated}`);
     return (
-      <Redirect to={'/login'}/>
+      <Redirect to={'/login'} />
+      
     )
   }
 
@@ -59,6 +54,7 @@ class App extends Component {
         onFailure={this.responseGoogle}
         response={this.responseGoogle}
         isAuthenticated={this.state.isAuthenticated}
+        onLogout={this.logout}
       >
       Log In With Google
       </GoogleLoginButton> 
@@ -66,11 +62,10 @@ class App extends Component {
       <Router>
         <div>
           <Switch>
-          <Route exact path="/" render={() => this.state.isAuthenticated ? <ClassList classes={this.state.classes} /> : <Redirect to={'/login'} />} />
+          <Route exact path="/" render={() => this.state.isAuthenticated ? <ClassList classes={this.state.classes} userId={this.state.userId} /> : <Redirect to={'/login'} />} />
           <Route exact path="/login" render={() => !this.state.isAuthenticated ? <Login /> : <Redirect to={'/'} />}/>
           <Route exact path="/class" component={Class} />
-          <Route exact path="/class/:id" component={Class} />
-          {/*<Route exact path="/classlist" component={ClassList} classes={this.state.classes}/> */}
+          <Route exact path="/class/:id" render={(props) => <Class {...props} />} />
           <Route component={NoMatch} />
           </Switch>
         </div> 

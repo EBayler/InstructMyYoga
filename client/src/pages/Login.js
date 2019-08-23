@@ -2,14 +2,15 @@ import React from "react";
 import './style.css'
 
 
-const GoogleLoginButton = (props) => {
-
+const LoginPage = () => {
 
   return (
+
 
   <div>
     <div className="Parent">
       <h1>Instruct My Yoga</h1>
+    <p>Please log in with your Google ID to start building classes</p>
           <img src="https://seeklogo.com/images/O/OM_YOGA-logo-6F30131211-seeklogo.com.png" alt="om symbol"></img>
         {/* <br></br>      
         <img className="Information" src="https://www.bensound.com/image/iconmonstr-info-6-icon.svg" alt="information icon"></img>
@@ -20,4 +21,4 @@ const GoogleLoginButton = (props) => {
   );
 };
 
-export default GoogleLoginButton;
+export default LoginPage;

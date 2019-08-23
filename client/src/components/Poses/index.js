@@ -3,10 +3,6 @@ import PoseCard from '../PoseCard';
 import './style.css';
 
 class Poses extends React.Component {
-
-  componentDidMount(){
-    console.log("Poses Component Mounted");
-  }
    
   render(){
     return (
