@@ -2,12 +2,16 @@ import React from "react";
 import GoogleLogin from 'react-google-login'; // Google login
 import GoogleLogout from 'react-google-login';
 import config from "../../auth_config.json";
+import "./style.css";
+
 
 const GoogleLoginButton = (props) => {
 
   return (
+
     
     <div>
+
       { !props.isAuthenticated ? (
         <div>
           {console.log(`In login state ${props.isAuthenticated}`)}
@@ -33,7 +37,6 @@ const GoogleLoginButton = (props) => {
         ) 
       }
     </div>
-
   );
 };
 
