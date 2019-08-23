@@ -13,7 +13,7 @@ class Class extends Component {
     userId: "",
     classId: "",
     classPoses: [],
-    userObject: {}
+    userObject: null
   }
   componentWillMount(){
     this.setState({
@@ -26,9 +26,9 @@ class Class extends Component {
     this.loadPoses();
     this.loadClassPoses()
     var idTest = document.getElementById('idTest');
-    var canvasIdTest = document.getElementById('canvas');
+    var canvas = document.getElementById('canvas');
     var dragFrom = idTest;
-    var dragTo = canvasIdTest;
+    var dragTo = canvas;
     console.log(`The following props are available for use: ${this.props.match.params.id}`)
     console.log(`The following props are available for use: ${this.props.location.state.userId}`)    
     
