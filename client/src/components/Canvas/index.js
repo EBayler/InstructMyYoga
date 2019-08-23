@@ -24,33 +24,7 @@ class Canvas extends React.Component{
   }
 
   loadClassPoses = () => {
-    // Why does this log
     console.log(this.props.selectedClass)
-    // but not this?  I need this.props.user.classes[@selectedClass].poses map through  
-    // the chrome tool will log it just fine! WTF????
-    // {
-    //   "user": {
-    //     "classes": [
-    //       {
-    //         "classId": 1,
-    //         "classTitle": "Demo Class",
-    //         "poses": [
-    //           1,
-    //           2,
-    //           3,
-    //           4,
-    //           5,
-    //           6
-    //         ]
-    //       }
-    //     ],
-    //     "_id": "5d5c9f1e0b3b86176091ddbb",
-    //     "userName": "Demo User",
-    //     "userImage": "https://lh4.googleusercontent.com/-Ya9AZqgHWV0/AAAAAAAAAAI/AAAAAAAAABs/LxYT6VoF_xM/s96-c/photo.jpg",
-    //     "userId": "100263884732038911546"
-    //   },
-    //   "selectedClass": 0
-    // }
     console.log(`in loadClassPoses ${this.props.user.userId}`) 
   }
 
