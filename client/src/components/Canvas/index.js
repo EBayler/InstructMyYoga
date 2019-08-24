@@ -24,32 +24,48 @@ class Canvas extends React.Component{
   }
 
   loadClassPoses = () => {
-    console.log(this.props.selectedClass)
-    console.log(`in loadClassPoses ${this.props.user.userId}`) 
   }
 
   render(){
     return (
       <div id="canvas" className="Canvas">
-        { 
+        {/*
           this.props.user ? (
-            <h1>Class</h1>
-            // this.props.poses.map(pose => (
-            //   <PoseCard
-            //     key={pose.name}
-            //     name={pose.name}
-            //     sanskrit={pose.sanskrit}
-            //     image={pose.image}
-            //     description={pose.description}
-            //     difficulty={pose.difficulty}
-            //     type={pose.type}
-            //     benefits={pose.benefits}
-            //   >{pose.name}</PoseCard>
-            // ))
+            <div>
+              <h1>Class</h1>
+              this.props.user.classes[this.props.selectedClass].poses.(pose => (
+                  <PoseCard
+                    key={pose.name}
+                    name={pose.name}
+                    sanskrit={pose.sanskrit}
+                    image={pose.image}
+                    description={pose.description}
+                    difficulty={pose.difficulty}
+                    type={pose.type}
+                    benefits={pose.benefits}
+                  >{pose.name}</PoseCard>
+                ))
+              )
+              {/*
+                this.props.user.classes[this.props.selectedClass].poses.map(pose => (
+                <PoseCard
+                  key={pose.name}
+                  name={pose.name}
+                  sanskrit={pose.sanskrit}
+                  image={pose.image}
+                  description={pose.description}
+                  difficulty={pose.difficulty}
+                  type={pose.type}
+                  benefits={pose.benefits}
+                >{pose.name}</PoseCard>
+              ))
+              
+            </div>
           ) : (
             <h1> Drag poses here to start building your class.</h1>
           )
-      }
+          }
+            */}
       </div>
     );
   }

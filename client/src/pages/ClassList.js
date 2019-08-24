@@ -1,7 +1,6 @@
 
 import React from "react";
 import { withRouter } from "react-router-dom";
-
 import ClassCard from "../components/ClassCard"
 
 const ClassList = (props) => {
@@ -35,8 +34,8 @@ return (
         </ClassCard>
       ))}
       <ClassCard
-        key={props.classes.classId + 1}
-        classId={props.classes.classId +1}
+        key={props.classes[props.classes.length +1]}
+        classId={props.classes[props.classes.length +1]}
         classTitle={"Enter your class name here"}
         onClick={(e) => handleClick(props.classes.classId +1)}
         userId={props.userId}
