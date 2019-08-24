@@ -5,11 +5,13 @@ function PoseCard(props){
 
 
   let benefitsList = ""
-  for (let i=0; i<props.benefits.length; i++){
-    if (i + 1 === props.benefits.length) {
-      benefitsList += props.benefits[i]
-    } else {
-      benefitsList += props.benefits[i] + ", "
+  if (props.benefits){
+    for (let i=0; i<props.benefits.length; i++){
+      if (i + 1 === props.benefits.length) {
+        benefitsList += props.benefits[i]
+      } else {
+        benefitsList += props.benefits[i] + ", "
+      }
     }
   }
 
