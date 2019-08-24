@@ -59,7 +59,11 @@ class Class extends Component {
       userObject.classes[this.state.classId -1 ] = posesArray;
       return { userObject };
       })
-
+    
+    this.setState ({
+      classPoses: posesArray
+    })
+    console.log(this.state.classPoses);
   }
 
   loadPoses = () => {
@@ -109,7 +113,10 @@ class Class extends Component {
           </div>
           <div className="canvas">
             {console.log(this.state.userObject)}
-            <Poses poses={this.state.poses}/>
+          <Poses poses={this.state.classPoses}/>
+            {/*this.state.userObject &&
+            <Poses poses={this.state.userObject}/>
+            */}
           <Canvas 
             user={this.state.userObject}
             selectedClass={this.state.classId - 1}
