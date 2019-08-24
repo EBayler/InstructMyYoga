@@ -29,9 +29,8 @@ class Class extends Component {
     console.log(`The following class will be used ${this.props.match.params.id}`)
     console.log(`The following props are available for use: ${this.props.location.state.userId}`)
     var idTest = document.getElementById('idTest');
-    var canvas = document.getElementById('canvas');
+    var dragTo = document.getElementById('dragTo');
     var dragFrom = idTest;
-    var dragTo = canvas;
     dragula([dragFrom, dragTo], {
       copy: function (el, source) {
         console.log(`${el} is being copied`);
@@ -111,7 +110,7 @@ class Class extends Component {
           <div className="poses">
             <Poses poses={this.state.poses}/>
           </div>
-          <div className="canvas">
+          <div className="canvas" id="dragTo">
             {console.log(this.state.userObject)}
           <Poses poses={this.state.classPoses}/>
             {/*this.state.userObject &&

@@ -20,9 +20,54 @@ h1 {
     height: 45px;
     margin-top: 75px;
     /* visibility: hidden; */
-
 }
 
+.canvas {
+    margin-top: 25px;
+    background-color: #04478d;
+    height: 100%;
+    width: 80%px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.canvas {
+    min-height: 80%;
+    width: 75%;
+}
+
+.flex-container {
+    display: flex;
+    min-height: 80%;
+}
+
+.poses {
+    width: 25%;
+}
+
+.classTitle {
+    text-align: center;
+}
+
+#noter-text-area {
+    position: absolute;
+    height: 60px;
+    width: 100%; 
+    padding: 10px;
+    margin: -80px;
+    text-align: center;
+    background-color: #020926;
+    border: none;
+    color: #94d3c8;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+
+.Everything {
+    background-color: #020926;
+    padding: 100px;
+
+}
 /* .Information .Attention{
       visibility: hidden;
       width: 120px;
