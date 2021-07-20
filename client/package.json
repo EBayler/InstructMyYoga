@@ -11,7 +11,7 @@
     "react-dragula": "^1.1.17",
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^3.2.1",
-    "react-native": "^0.60.5",
+    "react-native": "^0.62.3",
     "react-router-dom": "^5.0.1",
     "react-scripts": "1.1.4"
   },
